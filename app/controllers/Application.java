@@ -17,6 +17,7 @@ public class Application extends Controller {
      * Display the home page.
      */
     public static Result index() {
+        int i = 0;
         return ok(index.render());
     }
   
@@ -24,6 +25,7 @@ public class Application extends Controller {
      * Display the chat room.
      */
     public static Result chatRoom(String username) {
+        int i = 1;
         if(username == null || username.trim().equals("")) {
             flash("error", "Please choose a valid username.");
             return redirect(routes.Application.index());
